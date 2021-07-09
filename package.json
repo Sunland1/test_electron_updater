@@ -1,13 +1,13 @@
 {
   "name": "electronupdate_test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "electron .",
-    "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "start": "electron .",
+    "build": "electron-builder build --win --publish=xnever",
+    "deploy": "electron-builder build --win --publish=always"
   },
   "author": "",
   "license": "ISC",
@@ -19,8 +19,7 @@
     "electron-updater": "^4.3.9"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Sunland1/test_electron_updater.git"
+    "type": "git",
+    "url": "https://github.com/Sunland1/test_electron_updater.git"
   }
-  
 }
