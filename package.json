@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "electron ."
+    "start" : "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +21,6 @@
   "repository": {
     "type" : "git",
     "url" : "https://github.com/Sunland1/test_electron_updater.git"
-  },
-  "build": "electron-builder build --win --publish never",
-  "deploy": "electron-builder build --win --publish always"
+  }
+  
 }
