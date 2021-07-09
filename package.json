@@ -19,5 +19,7 @@
   "repository": {
     "type" : "git",
     "url" : "https://github.com/Sunland1/test_electron_updater.git"
-  }
+  },
+  "build": "electron-builder build --win --publish never",
+  "deploy": "electron-builder build --win --publish always"
 }
