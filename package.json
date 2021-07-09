@@ -15,5 +15,9 @@
   },
   "dependencies": {
     "electron-updater": "^4.3.9"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Sunland1/test_electron_updater.git"
   }
 }
