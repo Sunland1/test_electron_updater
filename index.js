@@ -7,8 +7,9 @@ let secondWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 540,
+    height: 500,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -71,19 +72,22 @@ ipcMain.on('restart_app', () => {
     autoUpdater.quitAndInstall();
 });
 
-
+autoUpdater.on('checking-for-update' , () => {
+  mainWindow.webContents.send('checking-for-update');
+});
 
 
 autoUpdater.on('update-available', () => {
-  mainWindow.webContents.send('update_available');
-});
-
-autoUpdater.on('update-downloaded', () => {
-  mainWindow.webContents.send('update_downloaded');
+  mainWindow.webContents.send('update-available');
 });
 
 
 autoUpdater.on("update-not-available" , () => {
-  mainWindow.webContents.send('update_not_available')
-})
+  mainWindow.webContents.send('update-not-available');
+});
+
+
+autoUpdater.on('update-downloaded', () => {
+  mainWindow.webContents.send('update-downloaded');
+});
 
